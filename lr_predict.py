@@ -38,4 +38,3 @@ P_test = predictionDataFrame.loc[:, predictionDataFrame.columns != 'Income']
 P_pred = linear_regression.predict(P_test)
 pred_to_csv = generate_csv(predictionDataFrame, P_pred)
 print('CSV generated')
-
