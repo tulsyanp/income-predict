@@ -6,9 +6,11 @@ pandas, numpy, sklearn
 ```
 
 #### Steps to Predict Output
+
+1. In file "predict.py", uncomment the model that you want to use for prediction
+2. Run the command
 ```
-1. In file predict.py, uncomment the model that you want to use for prediction
-2. Run the command python predict.py
+python predict.py
 ```
 
 #### Project Flow
