@@ -42,7 +42,6 @@ def data_pre_processing(train, predict):
 
     # cat codes/target mean encoding
     dataFrame['Gender'] = dataFrame['Gender'].astype('category').cat.codes
-    # dataFrame['Wears Glasses'] = dataFrame['Wears Glasses'].astype('category').cat.codes
     dataFrame['Country'] = dataFrame['Country'].map(dataFrame.groupby('Country')['Income'].mean())
     dataFrame['Profession'] = dataFrame['Profession'].map(dataFrame.groupby('Profession')['Income'].mean())
     dataFrame['University Degree'] = dataFrame['University Degree'].map(dataFrame.groupby('University Degree')['Income'].mean())
