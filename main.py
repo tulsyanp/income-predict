@@ -75,7 +75,7 @@ def generate_csv(dataset, prediction):
 
 
 def model_linear_regression_predict(X, y, predictionDataFrame):
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=0)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=10)
 
     linear_regression = LinearRegression()
     linear_regression.fit(X_train, y_train)
@@ -89,9 +89,9 @@ def model_linear_regression_predict(X, y, predictionDataFrame):
 
 
 def model_random_forest_predict(X, y, predictionDataFrame):
-    train_features, test_features, train_labels, test_labels = train_test_split(X, y, test_size=0.1, random_state=42)
+    train_features, test_features, train_labels, test_labels = train_test_split(X, y, test_size=0.1, random_state=10)
 
-    random_forest = RandomForestRegressor(n_estimators=200, random_state=42)
+    random_forest = RandomForestRegressor(n_estimators=200, random_state=10)
     random_forest.fit(train_features, train_labels)
 
     predictions = random_forest.predict(test_features)
