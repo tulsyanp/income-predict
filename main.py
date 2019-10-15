@@ -16,7 +16,7 @@ def data_pre_processing(train, predict):
 
     # Column Gender Manipulations
     dataFrame['Gender'].fillna('unknown', inplace=True)
-    dataFrame['Gender'].replace(['0'], ['male'], inplace=True)
+    dataFrame['Gender'].replace(['0'], ['unknown'], inplace=True)
     dataFrame['Gender'] = dataFrame['Gender'].str.lower()
     dataFrame['Gender'] = dataFrame['Gender'].str.strip()
 
